@@ -8,5 +8,5 @@
 	<p><%= porfolio_item.body %></p>
 	<%= image_tag porfolio_item.thumb_image unless porfolio_item.thumb_image.nil? %>
 	<%= link_to "Edit", edit_porfolio_path(porfolio_item) %>
-	<a href="/porfolios/<%= porfolio_item.id %>/edit">Edit Two</a>
+	<%= link_to 'Delete Porfolio Item', porfolio_path(porfolio_item), method: :delete, data: { confirm: 'Are you sure?' } %>
 <%end%>
