@@ -31,6 +31,10 @@ class PorfoliosController < ApplicationController
          else
         format.html { render :edit }
         end
+      end
     end
-  end
+
+    def show
+    	@porfolio_item = Porfolio.find(params[:id])
+    end
 end
